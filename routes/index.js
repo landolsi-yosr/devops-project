@@ -1,7 +1,13 @@
+
+
 const express = require('express');
 const router = express.Router();
-const { getHome } = require('../controllers/homeController');
+const { showGame, checkGuess } = require('../controllers/gameController');
 
-router.get('/', getHome);
+// Afficher la page de jeu
+router.get('/', showGame);
+
+// Vérifier la supposition de l'utilisateur
+router.post('/guess', checkGuess);
 
 module.exports = router;

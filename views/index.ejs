@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeu de Devinette</title>
+</head>
+<body>
+  <h1>Bienvenue au jeu de devinette !</h1>
+  <p>Devinez un nombre entre 1 et 100.</p>
+  <form action="/guess" method="POST">
+    <input type="number" name="guess" placeholder="Entrez votre supposition" required>
+    <button type="submit">Deviner</button>
+  </form>
+
+  <p><strong>Essais :</strong> <%= attempts %></p>
+  <p><strong>Message :</strong> <%= message %></p>
+</body>
+</html>
